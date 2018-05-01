@@ -1,13 +1,19 @@
 # Michael Smart, BASc., MASc.
 
-<img src="pics/me_and_the_moose.png" alt="Left: myself, Right: The Autonomoose" height="300">
+<img src="pics/Me_and_the_Moose.png" alt="Left: myself, Right: The Autonomoose" height="300">
+
+* * *
+
+| [About Me](https://michaelhsmart.github.io/#about-me) | [Current Projects](https://michaelhsmart.github.io/#current-projects) | [Publications](https://michaelhsmart.github.io/#publications) | [Past Projects](https://michaelhsmart.github.io/#past-projects) |
+
+* * *
 
 ## About Me
 
 I am currently the Software Lead and a Perception Analyst with
 [Autonomoose](https://www.autonomoose.net/), the University of Waterloo's
 premier self-driving car project and one of the first of its kind to be testing
-in real Canadian environments. Our software was also showcased at CES twice
+in real Canadian environments. Our software was also showcased twice at [CES](https://www.ces.tech/)
 (2017, 2018) comprising the full autonomy stack of the demo in partnership with
 [Renesas](http://renesasatces.com/).
 
@@ -21,8 +27,10 @@ Detection and Tracking of Lane Boundary Markings for Autonomous
 Driving](https://uwspace.uwaterloo.ca/handle/10012/10454)*". My graduate areas
 of focus were computer vision, robot perception, and autonomous vehicles.
 
-- My github: https://github.com/michaelhsmart (most of our work is private, sorry!)
+- My Github: [https://github.com/michaelhsmart](https://github.com/michaelhsmart) (most of our work is private, sorry!)
 - My email: michaelsmart [at] uwaterloo [dot] ca
+
+* * *
 
 ## Current Projects
 
@@ -31,24 +39,26 @@ of focus were computer vision, robot perception, and autonomous vehicles.
 For [Autonomoose](https://www.autonomoose.net/) I currently own a few
 longer-term projects:
 
-#### Coordinate Frame / TF Design
+**Coordinate Frame / TF Design**
 
 I'm redesigning our coordinate frame and transform system to follow REP-105
 conventions for distributed responsibility of transform estimation. Between all
 of the different map and sensor frames, there are over 20 frames in the stack -
 making it a nice challenge!
 
-#### Path Planner Rewrite
+**Path Planner Rewrite**
 
 Our previous path planner originated as pure research code, with most of the
 package contained within a single 7k+ LOC class. I'm now refactoring and largely
-rewriting the code to follow proper OOP practices so that it can be reusable and
+rewriting the code to follow OOP practices so that it can be reusable and
 integrate more easily with newly developed modules or with our industry
 partners' software and requirements.
 
+* * *
+
 ## Publications
 
-2017: **Smart, M.**, Vaishnav, S., and Waslander, S., ["*Real-Time Robust Lane
+2017: **M. Smart**, S. Vaishnav, and S. L. Waslander, ["*Real-Time Robust Lane
 Marking Detection and Tracking for Degraded Lane
 Markings,*"](https://www.sae.org/publications/technical-papers/content/2017-01-0043/)
 SAE Technical Paper 2017-01-0043, 2017
@@ -124,7 +134,8 @@ with the missing data labels as latent variables, which allowed the system to be
 trained without requiring any labels at all. This would conventionally suffer
 from mode collapse and model identifiability challenges, but I was also able to
 demonstrate that by providing extremely weak prior parameter distributions, the
-EM-trained models would not display either of these weaknesses.
+EM-trained models would not display either of these weaknesses. This work was
+completed using MATLAB.
 
 The final contribution of my thesis was demonstrating the importance of using 3D
 information prior to applying a homography transform to obtain a Bird's Eye View
@@ -134,7 +145,7 @@ line-like streaks that resemble lane markings as shown below:
 <img src="pics/BEV_Distortions.png" alt="Scene | Depth Map | Map" height="300">
 
 Testing my methods against the [KITTI Roads
-dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php), I was able to
+Dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php), I was able to
 demonstrate that applying a stereo-based height threshold to pre-filter the
 image dramatically improved the safety of the system by eliminating false lane
 marking features with a **95.5%** Negative Predictive Value. Investigation
@@ -144,14 +155,14 @@ features at a local level (see below), the best solution is to incorporate
 information beyond what the BEV provides, such as 3D from stereo vision, before
 leaving an algorithm to struggle to learn it.
 
-<img src="pics/TRUE_PATCH.png" alt="lane marking" height="100">
-<img src="pics/FALSE_PATCH.png" alt="sign post" height="100">
+<img src="pics/True_Patch.png" alt="lane marking" height="100">
+<img src="pics/False_Patch.png" alt="sign post" height="100">
 
 Above: One is a signpost, the other is a lane marking
 
 The resulting system can be trained on unlabelled data and demonstrated a very
 low false-detection rate (**~90%** precision) on real-world data. This work was
-later converted to real-time performance as the ULMA project (see above).
+later rewritten in C++ for real-time performance as the ULMA project (see above).
 
 #### Underwater Stereo SLAM with Refraction Correction
 
@@ -166,14 +177,14 @@ the scene (water).
 As refraction is a nonlinear process, significant refraction requires revisiting
 all of the geometry involved in conventional stereo vision. We were able to
 correct for the refraction-induced distortions using a physics-based model in
-which epipolar lines become epipolar curves. This work culminated in a
+which epipolar search-lines become epipolar search-curves. This work culminated in a
 publication presented at [IROS
 2013](http://ieeexplore.ieee.org/document/6696833/). My primary contribution to
 the work was my research on the refractive projection of images, the generation
 and reprojection of epipolar curves, and the calibration method (sections II,
 III, and IV).
 
-<img src="pics/underwater_images.png" alt="Scene | Depth Map | Map" height="200">
+<img src="pics/Underwater_Images.png" alt="Scene | Depth Map | Map" height="200">
 
 Left: Image of the test scene, Middle: Refraction-corrected stereo depth image,
 Right: View of resulting SLAM scene.
