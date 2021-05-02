@@ -10,16 +10,25 @@
 
 ## About Me
 
-I am currently the Software Lead and a Perception Analyst with
+I am a robotics and perception system researcher/dev with a passion for teasing
+out the details separating research from production. I love finding new ways to
+break & fix things in the unending search for bugs and edge cases.
+
+I'm currently working at the [Trailab](https://www.trailab.utias.utoronto.ca/)
+on the next AV dataset project from our team as the Lead Developer.
+From Aug 2019 to Feb 2021 I worked with Gatik AI as a Senior Research Engineer
+for Autonomous Vehicles.
+
+I previously was the Software Lead and a Perception Analyst with
 [Autonomoose](https://www.autonomoose.net/), the University of Waterloo's
 premier self-driving car project and one of the first of its kind to be testing
 in real Canadian environments. Our software was also showcased twice at [CES](https://www.ces.tech/)
 (2017, 2018) comprising the full autonomy stack of the demo in partnership with
-[Renesas](http://renesasatces.com/).
+[Renesas](https://youtu.be/ev05MY7JTCw).
 
 I completed my BASc in Systems Design Engineering from the University of
 Waterloo in 2012 with a minor in German, having spent my third year on exchange
-at [TUBS](https://www.tu-braunschweig.de/index.html). My undergraduate areas of
+at [TUBS](https://www.tu-braunschweig.de). My undergraduate areas of
 focus were control systems, signal processing, and robot dynamics. In 2016 I
 completed my MASc in Mechanical and Mechatronics Engineering under the
 supervision of Prof. Steven Waslander with the thesis "*[Robust Bayesian
@@ -27,36 +36,34 @@ Detection and Tracking of Lane Boundary Markings for Autonomous
 Driving](https://uwspace.uwaterloo.ca/handle/10012/10454)*". My graduate areas
 of focus were computer vision, robot perception, and autonomous vehicles.
 
-- My Github: [https://github.com/michaelhsmart](https://github.com/michaelhsmart) (most of our work is private, sorry!)
+- My Github: [https://github.com/michaelhsmart](https://github.com/michaelhsmart) (most of our work is private until release, sorry!)
 - My email: michaelsmart [at] uwaterloo [dot] ca
 
 * * *
 
-## Current Projects
+## Current Side Projects
 
-### Autonomoose
+I'm an unabashedly huge nerd and enjoy studying random math topics in my spare
+time. One of my current side projects is experimenting with Voronoi tesselations
+and randomly controlled colour gradients to generate abstract art. The idea is
+come up with a sort of discretized bleeds. So far it looks something like:
 
-For [Autonomoose](https://www.autonomoose.net/) I currently own a few
-longer-term projects:
+<img src="pics/wip_art.png" alt="Scene | Depth Map | Map" height="400">
 
-**Coordinate Frame / TF Design**
-
-I'm redesigning our coordinate frame and transform system to follow REP-105
-conventions for distributed responsibility of transform estimation. Between all
-of the different map and sensor frames, there are over 20 frames in the stack -
-making it a nice challenge!
-
-**Path Planner Rewrite**
-
-Our previous path planner originated as pure research code, with most of the
-package contained within a single 7k+ LOC class. I'm now refactoring and largely
-rewriting the code to follow OOP practices so that it can be reusable and
-integrate more easily with newly developed modules or with our industry
-partners' software and requirements.
+I still want to tweak the border region shapes and the colour sampling to draw
+from a more perceptually uniform colour space than HSV. So far though, I still
+think it looks neat.
 
 * * *
 
 ## Publications
+
+2021: Pitropov M, Garcia DE, Rebello J, et al., ["*Canadian Adverse Driving Conditions Dataset*"](http://cadcd.uwaterloo.ca/)
+The International Journal of Robotics Research (IJRR), 2021
+
+2020: Harakeh, A., **Smart, M.**, and Waslander, S. L., ["*BayesOD: A Bayesian
+Approach for Uncertainty Estimation in Deep Object Detectors,*"](https://ieeexplore.ieee.org/abstract/document/9196544)
+2020 IEEE International Conference on Robotics and Automation (ICRA), 2020
 
 2017: **M. Smart**, S. Vaishnav, and S. L. Waslander, ["*Real-Time Robust Lane
 Marking Detection and Tracking for Degraded Lane
@@ -74,6 +81,27 @@ with refraction correction,"*](https://ieeexplore.ieee.org/document/6696833/)
 2013
 
 ## Past Projects
+
+#### Autonomoose
+
+For [Autonomoose](https://www.autonomoose.net/) I was the Software Lead for the
+duration of the project. This involved ownership of many architecture and signal
+topology issues, but I would like to specifically highlight two of the
+longer-term projects that I owned:
+
+**Coordinate Frame / TF Design**
+
+I redesigned our coordinate frame and transform system to follow REP-105
+conventions for distributed responsibility of transform estimation. Between all
+of the different map and sensor frames, there were over 30 frames in the system.
+
+**Path Planner Rewrite**
+
+Our previous path planner originated as pure research code, with most of the
+package contained within a 10k+LOC monolith. I'm refactored and largely
+rewrote the code to follow OOP practices so that it can be reusable and
+integrate more easily with newly developed modules or with our industry
+partners' software and requirements.
 
 #### ULMA
 
