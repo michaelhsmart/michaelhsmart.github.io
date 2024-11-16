@@ -20,7 +20,7 @@ From Aug 2019 to Feb 2021 I worked with Gatik AI as a Senior Research Engineer
 for Autonomous Vehicles.
 
 I previously was the Software Lead and a Perception Analyst with
-[Autonomoose](https://www.autonomoose.net/), the University of Waterloo's
+[Autonomoose](https://autonomoosedev.wixsite.com/autonomoose/), the University of Waterloo's
 premier self-driving car project and one of the first of its kind to be testing
 in real Canadian environments. Our software was also showcased twice at [CES](https://www.ces.tech/)
 (2017, 2018) comprising the full autonomy stack of the demo in partnership with
@@ -84,7 +84,7 @@ with refraction correction,"*](https://ieeexplore.ieee.org/document/6696833/)
 
 #### Autonomoose
 
-For [Autonomoose](https://www.autonomoose.net/) I was the Software Lead for the
+For [Autonomoose](https://autonomoosedev.wixsite.com/autonomoose/) I was the Software Lead for the
 duration of the project. This involved ownership of many architecture and signal
 topology issues, but I would like to specifically highlight two of the
 longer-term projects that I owned:
